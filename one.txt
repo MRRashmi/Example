@@ -1,0 +1,9 @@
+use my_db;
+select * from emp;
+select *,salary*3 as "Quaterly Salary" from emp;
+select *, salary *1.15 as "Hiked Salary" from emp;
+select name, deptno, salary* 1.12 as "NEW SALARY" from emp where job="SALESMAN";
+select * from emp;
+select empno,job,hiredate,deptno, salary*12 as "Annual Salary", salary*1.178 as "Hiked Salary" from emp where job = "MANAGER";
+select empno,name,job,hiredate,manager,salary as "Actual Salary",commission,deptno,salary-(salary*0.2) as "Revised Salary" 
+from emp where job= "ANALYST";
