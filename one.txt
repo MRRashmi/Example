@@ -7,3 +7,15 @@ select * from emp;
 select empno,job,hiredate,deptno, salary*12 as "Annual Salary", salary*1.178 as "Hiked Salary" from emp where job = "MANAGER";
 select empno,name,job,hiredate,manager,salary as "Actual Salary",commission,deptno,salary-(salary*0.2) as "Revised Salary" 
 from emp where job= "ANALYST";
+
+select name,empno,salary as "Previous Salary", salary*12 as "Annual Salary" from emp;
+select name,empno,salary,salary*1.3 as "Hiked Salary" from emp;
+select name,salary *12 as "Annual Salary with a monthly commission of 200" from emp where commission=200;
+select name,salary *12 as "Annual Salary with a yearly commission of 200" from emp where commission=1000;
+select * from emp where salary>1500;
+select name,hiredate,salary,salary*12 as "Annual Salary" from emp where salary*12>10000;
+select * from emp where deptno=20;
+select * from emp where job="MANAGER";
+select * from emp where hiredate>"1995-12-31";
+select * from emp where commission>salary;
+select * from emp where job="CLERK";
